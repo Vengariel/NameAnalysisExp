@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameAnalysis", "NameAnalysis\NameAnalysis.csproj", "{672B1F4E-B852-4E61-A614-B5090F25E647}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NameAnalysis", "NameAnalysis\NameAnalysis.csproj", "{672B1F4E-B852-4E61-A614-B5090F25E647}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

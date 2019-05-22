@@ -19,6 +19,5 @@ namespace NameAnalysis
 
             return Path.Combine(pathToApp, "Data", FILENAME); ;
         }
-
     }
 }

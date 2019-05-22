@@ -63,7 +63,6 @@ namespace NameAnalysis
             return getPersonProperty;
         }
 
-
         public static IEnumerable<Tuple<string, int>> GetTopWordsByColumn(List<PersonName> personNameList,
             ColumnsEnum column, int iRank, bool isDescending)
         {
@@ -77,5 +76,4 @@ namespace NameAnalysis
             return wordCounts.Take(iRank);
         }
     }
-
 }

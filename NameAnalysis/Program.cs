@@ -11,24 +11,22 @@ namespace NameAnalysis
         const char SEPARATOR = '|';
         static void Main(string[] args)
         {
-
-           
             string pathToFile = PathUtils.GetPathToFile();
             Console.WriteLine("------------WHOLE WORD STATISTICS");
-            List<PersonName> personNames = NameExtractor.GetPersonNameList(pathToFile, SEPARATOR, COLUMNNUMBER);
-            PrintTopByField(personNames, ColumnsEnum.Name, 25, true);
-            PrintTopByField(personNames, ColumnsEnum.FirstLastName, 25, true);
-            PrintTopByField(personNames, ColumnsEnum.SecondLastName, 25, true);
+            List<PersonName> personNames = NameExtractor.GetPersonNameList(pathToFile, SEPARATOR, COLUMNNUMBER, true);
+            
+            // PrintTopByField(personNames, ColumnsEnum.Name, 25, true);
+            //   PrintTopByField(personNames, ColumnsEnum.FirstLastName, 25, true);
+            //   PrintTopByField(personNames, ColumnsEnum.SecondLastName, 100, true);
 
             Console.WriteLine("------------SPLIT WORD STATISTICS");
             Console.ReadLine();
 
-            PrintTopByField(personNames, ColumnsEnum.Name, 25, true, false);
-            PrintTopByField(personNames, ColumnsEnum.FirstLastName, 25, true, false);
-            PrintTopByField(personNames, ColumnsEnum.SecondLastName, 25, true, false);
+            //  PrintTopByField(personNames, ColumnsEnum.Name, 2, true, false);
+            //   PrintTopByField(personNames, ColumnsEnum.FirstLastName, 25, true, false);
+            PrintTopByField(personNames, ColumnsEnum.SecondLastName, 100, true, false);
             Console.ReadLine();
         }
-
         static void PrintTopByField(List<PersonName> personNames, ColumnsEnum column, int iRank, bool isDescending, bool useWholeWord = true)
         {
             IEnumerable<Tuple<string, int>> topNames = useWholeWord ? NameAnalyzer.GetTopByColumn(personNames, column, iRank, isDescending)

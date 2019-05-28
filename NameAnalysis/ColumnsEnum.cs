@@ -7,7 +7,8 @@ namespace NameAnalysis
     public enum ColumnsEnum
     {
         Name = 4,
-        FirstLastName =5,
-        SecondLastName = 6
+        FirstLastName = 5,
+        SecondLastName = 6,
+        CURP = 2
     }
 }

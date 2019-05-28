@@ -27,7 +27,6 @@ namespace NameAnalysis
         public static IEnumerable<Tuple<string, int>> GetTopByColumn(List<PersonName> personNameList, ColumnsEnum column, int iRank, bool isDescending)
         {
             Func<PersonName, string> getPersonProperty = GetFunctionStrategy(column);
-            StringComparer comparer = new StringComparer();
 
             var groups = personNameList.GroupBy(getPersonProperty, new StringComparer());
             groups = isDescending ? groups.OrderByDescending(g => g.Count()) : groups.OrderBy(g => g.Count());
